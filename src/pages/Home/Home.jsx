@@ -38,8 +38,9 @@ export const Home = () => {
   return (
     <>
      <SearchProductInput contentInput={contentInput} SearchProduct={SearchProduct}/>
-      <h1 className="text-2xl font-bold mb-6">Productos</h1>
-      <section className="grid grid-cols-1 md:grid-cols-3 gap-10">
+     <h1 className="text-3xl font-extrabold text-gray-800 mb-6 border-b-2 border-blue-500 pb-2"> 🛍️ Productos</h1>
+
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-10 sm:grid-cols-2 ">
         {products.map((product) => (
           <Card key={product.id} {...product} />
         ))}
