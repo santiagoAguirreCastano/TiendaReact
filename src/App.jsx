@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom"
 import { Home } from "./pages/Home/Home"
 import { Header } from "./Layouts/Header/Header" 
+import { Footer } from "./Layouts/Footer/Footer"
 
 
 
@@ -16,6 +17,7 @@ export const App = ()=>{
         
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
+      <Footer />
     </>
       
 

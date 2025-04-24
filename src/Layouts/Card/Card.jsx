@@ -1,18 +1,22 @@
-import React from 'react'
+import React from 'react';
 
 export const Card = (products) => {
-const {title,price,description,category,image} = products
-    return (
-    
-    <div className='bg-white shadow-md rounded-lg p-4 flex flex-col items-center w-[30rem] align-center gap-3'>
-        <h2 className='text-[1.5rem]'>{title}</h2>
-        <h3 className='text-[0.8rem]'>{price}</h3>
-        <p className='text-[0.8rem]'>{description}</p>
-        <h3 className=''>{category}</h3>
-        <img src={image} alt="" className='rounded-lg h-[10rem]'/>    
+  const { title, price, description, category, image } = products;
 
+  return (
+    <div className="bg-white shadow-lg rounded-2xl p-6 w-80 hover:shadow-xl transition-shadow duration-300">
+      <img
+        src={image}
+        alt={title}
+        className="rounded-xl h-40 w-full object-cover mb-4"
+      />
+      <div className="flex flex-col gap-2">
+        <h2 className="text-xl font-semibold text-gray-800">{title}</h2>
+        <p className="text-sm text-gray-600 line-clamp-2">{description}</p>
+        <span className="text-xs text-gray-400 uppercase">{category}</span>
+        <div className="text-lg font-bold text-green-600">${price}</div>
+        
+      </div>
     </div>
-  )
-}
-
- 
+  );
+};
